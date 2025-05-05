@@ -2,13 +2,25 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Hero from '../layouts/Hero.astro';
+import Menu from '../layouts/Menu.astro';
 ---
 
 <Layout title="Venta de comida cubana en Holguín">
 	<Header />
 	<Hero />
+	<Menu />
 	{
-		//Menu - Ordene y disfrute
 		//Footer (contact btn)
 	}
 </Layout>
+
+<style is:global>
+ 	:root {
+		--border: linear-gradient(
+            to right, 
+            transparent, 
+            #8D601177,
+            transparent
+        );
+	}
+</style>
