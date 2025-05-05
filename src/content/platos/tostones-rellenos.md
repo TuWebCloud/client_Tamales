@@ -1,7 +1,7 @@
 ---
 name: Tostones rellenos
 price: 10
-img: /tamal-producto.webp
+img: tamal-producto.webp
 ---
 
 ### **Descripción**
