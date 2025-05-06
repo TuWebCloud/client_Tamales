@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../layouts/Header.astro';
 import Hero from '../layouts/Hero.astro';
 import Menu from '../layouts/Menu.astro';
+import Footer from '../layouts/Footer.astro';
 ---
 
 <Layout title="Venta de comida cubana en Holguín">
@@ -10,10 +11,9 @@ import Menu from '../layouts/Menu.astro';
 	<main class="pb-20">
 		<Hero />
 		<Menu />
+		{ /* modal */ }
 	</main>
-	{
-		//Footer (contact btn)
-	}
+	<Footer />
 </Layout>
 
 <style is:global>
@@ -24,5 +24,9 @@ import Menu from '../layouts/Menu.astro';
             #8D601177,
             transparent
         );
+	}
+
+	.show {
+		top: 0;
 	}
 </style>
