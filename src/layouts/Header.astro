@@ -1,5 +1,6 @@
 ---
 import PhoneIcon from "../components/icons/PhoneIcon.astro";
+import WhatsappIcon from "../components/icons/WhatsappIcon.astro";
 ---
 
 <header class="fixed flex flex-row items-center justify-between 
@@ -11,7 +12,8 @@ import PhoneIcon from "../components/icons/PhoneIcon.astro";
 
     <button class="bg-[#8D6011] w-8 h-8 sm:w-12 sm:h-12 flex flex-col items-center justify-center rounded-full text-white 
         md:hover:scale-110 transition">
-        <PhoneIcon fill="#fff" stroke="none" />
+        <span class="lg:absolute lg:opacity-0"><PhoneIcon fill="#fff" stroke="none" /></span>
+        <span class="absolute opacity-0 lg:static lg:opacity-100"><WhatsappIcon /></span>
     </button>
 
 </header>
