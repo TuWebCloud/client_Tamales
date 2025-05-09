@@ -8,7 +8,6 @@ Cada paquete contiene 5 **tamales**, 150g por unidad. Ideales para compartir en 
 
 ## **Ingredientes**
 
-- Maíz
 - Carne de cerdo
 - Especias
-- Hojas de maíz
+- Maíz
