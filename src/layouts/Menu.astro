@@ -12,14 +12,12 @@ const platos = await getCollection("platos")
     <section class="flex flex-wrap justify-around">
         {
             platos.map(async (plato) => {
-                const { data } = plato
-
                 return(
-                    <PlatoCard plato={data} />
+                    <PlatoCard plato={plato} />
                 )
             })
         }
-    </section>
+    </section>    
 </section>
 
 <style>
