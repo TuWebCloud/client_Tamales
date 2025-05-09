@@ -1,26 +1,30 @@
 ---
+import { render } from "astro:content"
+import PlatoModal from "./PlatoModal.astro"
+
 const { plato } = Astro.props
-const { name, price, img } = plato
+const { data } = plato
+const { name, img, price } = data
+
+const { Content } = await render(plato)
 ---
 
-<button>
-    <article class="flex flex-col gap-1 mt-10 justify-center hover:cursor-pointer">
-        <img src={img} alt={name} class="w-70 transition">
-        <h3 class="text-2xl font-bold text-center">{name}</h3>
-        <small class="text-green-600 text-lg text-center">{price} CUP</small>
-    </article>
-</button>
+<PlatoModal closeText="Cerrar">
+        <article slot="openButton" class="flex flex-col gap-1 mt-10 justify-center hover:cursor-pointer">
+            <img transition:name=`img-${name}` src={img} alt={name} class="w-70 transition">
+            <h3 class="text-2xl font-bold text-center">{name}</h3>
+            <small class="text-green-600 text-lg text-center">{price} CUP</small>
+        </article>
 
-<script>
-    const modal = document.getElementById('modal')
-
-    const handleClick = () => {
-        if (!modal?.classList.contains('show'))
-            modal?.classList.add('show')
-        else
-            modal?.classList.remove('show')
-    }
-</script>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+            <img transition:name=`img-${name}` src={img} alt={name} class="w-60 sm:w-full self-center">
+            <div class="flex flex-col gap-2">
+                <h3 class="text-2xl font-bold text-left">{name}</h3>
+                <Content />
+                <small class="block text-green-600 text-lg">{price} CUP</small>
+            </div>
+        </div>
+</PlatoModal>
 
 <style>
     article:hover > img {
