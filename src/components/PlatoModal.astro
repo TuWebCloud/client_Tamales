@@ -1,14 +1,44 @@
 ---
-import { render } from "astro:content"
-
-const { plato } = Astro.props
-const { name, price, img } = plato
-
-// TODO
+const { id, closeText } = Astro.props;
 ---
 
-<article id="modal" class="flex flex-col gap-1 mt-10 justify-center hover:cursor-pointer">
-    <img src={img} alt={name} class="w-70 transition">
-    <h3 class="text-2xl font-bold text-center">{name}</h3>
-    <small class="text-green-600 text-lg text-center">{price} CUP</small>
+<article class="modal-container">
+    <button class="open-btn">
+        <slot name="openButton" />
+    </button>
+    
+    <dialog class="modal bg-[rgba(255,255,255,0.5)] backdrop-blur-2xl rounded-2xl shadow-xl
+        w-80 sm:max-w-160 sm:min-w-150 sm:w-fit p-8 self-center">
+        <slot />
+        <form method="dialog" class="w-full flex justify-center">
+            <button class="bg-[#8D6011] text-white rounded-lg px-6 py-1 mt-4">
+                {closeText}
+            </button>
+        </form>
+    </dialog>
 </article>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const modalContainers = document.querySelectorAll('.modal-container');
+
+        modalContainers.forEach((container) => {
+            const button = container.querySelector('.open-btn');
+            const dialog = container.querySelector('.modal') as HTMLDialogElement;
+
+            if (button && dialog) {
+                button.addEventListener('click', () => {
+                    dialog.showModal();
+                });
+            }
+        });
+    });
+</script>
+
+<style>
+    dialog {
+        margin-left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+    }
+</style>
