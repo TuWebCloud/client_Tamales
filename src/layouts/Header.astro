@@ -29,10 +29,8 @@ lg:mx-[20%] w-full lg:w-[60%]" id="scrollDiv"></div>
             if (scrollDiv) {
                 if (window.scrollY > 0) {
                     scrollDiv.style.top = "0";
-                    header?.style.setProperty("--bg-after", "transparent");
                 } else {
                     scrollDiv.style.top = "-100%";
-                    header?.style.setProperty("--bg-after", "linear-gradient(to right, transparent, #8D601177,transparent);");
                 }
             }
         });
