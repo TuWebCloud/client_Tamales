@@ -4,11 +4,9 @@ price: 10
 img: tamal-producto.webp
 ---
 
-### Descripción
+Un plato de **congris**, 300g. Ideal para compartir en familia o disfrutar en cualquier ocasión.
 
-Un plato de congris, 300g. Ideal para compartir en familia o disfrutar en cualquier ocasión.
-
-### Ingredientes
+## **Ingredientes**
 
 - Arroz
 - Frijoles negros
