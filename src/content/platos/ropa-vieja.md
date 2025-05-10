@@ -1,10 +1,10 @@
 ---
 name: Ropa vieja
 price: 10
-img: tamal-producto.webp
+img: food.jpeg
 ---
 
-Contiene 250g de **carne**. Ideales para compartir en familia o disfrutar en cualquier ocasión.
+Contiene 250g de carne. Ideales para compartir en familia o disfrutar en cualquier ocasión.
 
 ## **Ingredientes**
 
